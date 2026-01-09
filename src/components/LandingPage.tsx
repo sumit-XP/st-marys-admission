@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, BookOpen, Calendar, CheckCircle, GraduationCap } from 'lucide-react';
 
 interface LandingPageProps {
@@ -6,6 +6,13 @@ interface LandingPageProps {
 }
 
 export const LandingPage: React.FC<LandingPageProps> = ({ onApply }) => {
+  const [imageError, setImageError] = useState(false);
+  
+  // The specific school image URL from the original requirements
+  const SCHOOL_IMAGE = "https://www.stmarysjajpurroad.com/school-admin/uploads/gallery/1576842162ing.jpg";
+  // High quality fallback image (Unsplash)
+  const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop";
+
   return (
     <div className="flex flex-col min-h-screen font-sans">
       {/* Hero Section */}
@@ -13,9 +20,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onApply }) => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" 
+            src={imageError ? FALLBACK_IMAGE : SCHOOL_IMAGE} 
+            onError={() => setImageError(true)}
             alt="School Campus" 
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover transition-opacity duration-700 ${imageError ? 'opacity-90' : 'opacity-100'}`}
           />
           {/* Strong gradient overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-school-navy/90 via-school-navy/80 to-school-navy/90 mix-blend-multiply"></div>
