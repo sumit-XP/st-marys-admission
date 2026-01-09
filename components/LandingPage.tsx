@@ -28,7 +28,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onApply }) => {
               St. Mary's Higher Secondary School
             </h1>
             <p className="text-xl md:text-2xl font-light mb-8 text-gray-200">
-              Jajpur Road, Odisha | Est. 2026-2027
+              Jajpur Road, Odisha
             </p>
             <p className="max-w-2xl mx-auto text-gray-300 mb-10 text-lg">
               Service Through Excellence. Molding the leaders of tomorrow with holistic education and values.
