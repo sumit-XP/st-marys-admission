@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>St. Mary's Higher Secondary School Admission</title>
+    <!-- Tailwind CSS CDN for guaranteed styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -16,7 +16,7 @@
             },
             colors: {
               school: {
-                red: '#8B0000', // Deep red/maroon
+                red: '#8B0000',
                 gold: '#C5A059',
                 navy: '#1B2A4A',
               }
@@ -25,18 +25,23 @@
         }
       }
     </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
-  }
-}
-</script>
-</head>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+      }
+    }
+    </script>
+  </head>
   <body class="bg-gray-50 text-gray-800 antialiased">
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

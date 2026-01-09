@@ -93,7 +93,7 @@ function App() {
       setSubmitError("Failed to submit application. Please check your internet connection and try again.");
       
       // For development/demo purposes if no URL is set:
-      if (GOOGLE_SCRIPT_URL === "INSERT_YOUR_GOOGLE_SCRIPT_URL_HERE") {
+      if ((GOOGLE_SCRIPT_URL as string) === "INSERT_YOUR_GOOGLE_SCRIPT_URL_HERE") {
           alert("PLEASE CONFIGURE THE SCRIPT URL IN App.tsx.\n\nSimulating success for now.");
           setSubmittedData(data);
           setView('success');
