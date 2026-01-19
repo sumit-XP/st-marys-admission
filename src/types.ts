@@ -1,13 +1,6 @@
-export interface SiblingInfo {
-  name: string;
-  admNo: string;
-  class: string;
-}
-
-export interface AdmissionFormData {
+export interface SATFormData {
   // Student Details
   classApplyingFor: string;
-  studentPhoto: File | null;
   studentName: string;
   aadharNo: string;
   gender: 'Male' | 'Female' | '';
@@ -17,40 +10,22 @@ export interface AdmissionFormData {
   religion: string;
   category: 'General' | 'SC' | 'ST' | 'OBC' | 'Others' | '';
   
-  // Parent Details
+  // Contact Details
   fatherName: string;
   motherName: string;
-  fatherAadhar: string;
-  motherAadhar: string;
   fatherMobile: string;
-  motherMobile: string;
   email: string;
-  fatherQualification: string;
-  motherQualification: string;
-  fatherOccupation: string;
-  motherOccupation: string;
   
-  // Address
-  presentAddress: string;
-  permanentAddress: string;
-  
-  // Siblings
-  sibling1: SiblingInfo;
-  sibling2: SiblingInfo;
-  
-  // Payment
-  paymentScreenshot: File | null;
-  
-  // Documents & Declaration
-  fatherSignature: File | null;
-  motherSignature: File | null;
+  // Declaration
   declarationDate: string;
   declarationAccepted: boolean;
 }
 
-export const initialFormData: AdmissionFormData = {
+// Keeping AdmissionFormData as alias for compatibility
+export type AdmissionFormData = SATFormData;
+
+export const initialFormData: SATFormData = {
   classApplyingFor: '',
-  studentPhoto: null,
   studentName: '',
   aadharNo: '',
   gender: '',
@@ -61,22 +36,8 @@ export const initialFormData: AdmissionFormData = {
   category: '',
   fatherName: '',
   motherName: '',
-  fatherAadhar: '',
-  motherAadhar: '',
   fatherMobile: '',
-  motherMobile: '',
   email: '',
-  fatherQualification: '',
-  motherQualification: '',
-  fatherOccupation: '',
-  motherOccupation: '',
-  presentAddress: '',
-  permanentAddress: '',
-  sibling1: { name: '', admNo: '', class: '' },
-  sibling2: { name: '', admNo: '', class: '' },
-  paymentScreenshot: null,
-  fatherSignature: null,
-  motherSignature: null,
   declarationDate: new Date().toISOString().split('T')[0],
   declarationAccepted: false,
 };
