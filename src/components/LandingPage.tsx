@@ -80,8 +80,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onApply }) => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-school-navy">SAT Exam Schedule</h3>
               <p className="text-gray-600 leading-relaxed">
-                Registration deadline: <span className="font-bold text-school-red">April 30th, 2026</span>.
-                Exam dates will be announced after registration closes.
+                SAT Exam Date: <span className="font-bold text-school-red">January 25th, 2026</span>.
               </p>
             </div>
 
