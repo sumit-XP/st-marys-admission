@@ -18,6 +18,9 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  // this is to redeploy
+
+
   const handleFormSubmit = async (data: AdmissionFormData) => {
     setIsSubmitting(true);
     setSubmitError(null);
